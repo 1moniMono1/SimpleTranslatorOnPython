@@ -9,7 +9,7 @@ import os
 
 
 
-
+#Get result
 def getSomeText():
     res = txt.get(1.0, END)
     res1 = combo.get()
@@ -26,12 +26,13 @@ def getSomeText():
     txt.insert(END, ', '.join(result['text']))
 
 
-
+#Clear the window
 def clear():
     list1 = window.pack_slaves()
     for l in list1:
         l.destroy()
 
+#main UI        
 def clicked():
     clear()
     global txt
@@ -49,7 +50,7 @@ def clicked():
     panel1.pack(side=LEFT)
 
 
-
+#Running
 window = Tk()
 window.title("Translator")
 window.geometry('315x400')
